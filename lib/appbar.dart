@@ -1,3 +1,4 @@
+import 'package:bottom_navigation_app/jobbsscreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -8,7 +9,9 @@ import 'package:flutter/material.dart';
         shadowColor: Colors.transparent,
         leading: IconButton(
           color: Colors.black,
-          onPressed: () {},
+          onPressed: () {
+
+          },
           iconSize: 20,
           icon: Icon(Icons.arrow_back),
         ),
@@ -29,6 +32,10 @@ import 'package:flutter/material.dart';
             ),
             onPressed: () {
               // do something
+               Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => JobbsScreen()),
+                    );
             },
           ),
         ],
