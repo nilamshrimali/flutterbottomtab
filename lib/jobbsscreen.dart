@@ -6,6 +6,7 @@ class JobbsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Colors.blue,
       backgroundColor: Color(0xFFFFFFFF),
       body: SafeArea(
         child: Column(
@@ -14,7 +15,7 @@ class JobbsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
+                  padding: const EdgeInsets.only(left: 20, top: 11),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,7 +69,7 @@ class JobbsScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 15),
               child: Container(
-                margin: EdgeInsets.all(13),
+                margin: EdgeInsets.all(14),
                 padding: EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
@@ -91,26 +92,681 @@ class JobbsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Recommended For You",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontFamily: 'Poppins-SemiBold',
-                      color: Color(0xFF000000),
-                      fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 13),
+                    child: Text(
+                      "Recommended For You",
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins-SemiBold',
+                          color: Color(0xFF000000),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 13),
+                    child: Text(
+                      "See All",
+                      style: TextStyle(
+                          color: Color(0xFF50BD9A),
+                          fontSize: 12,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+                flex: 2,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 9),
+                      child: Container(
+                        height: 154,
+                        width: 139,
+                        child: Stack(
+                          children: [
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                side: BorderSide(
+                                  color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                  width: 1,
+                                ),
+                              ),
+                              color: Color(0xFFFFFFFF),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/icons/smith.png",
+                                          width: 42,
+                                          height: 40,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 29, bottom: 19),
+                                        child: Image.asset(
+                                          "assets/icons/stary.png",
+                                          width: 14,
+                                          height: 14,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          bottom: 19,
+                                        ),
+                                        child: Text("4.5",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Color(0xFFFFAA08),
+                                              fontWeight: FontWeight.bold,
+                                            )),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 4),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text(
+                                      "Michael williams",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins-Medium'),
+                                    ),
+                                  ),
+                                  SizedBox(height: 4),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text(
+                                      "Plumber",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 10,
+                                          fontFamily: 'Poppins-Regular',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Image.asset(
+                                      "assets/icons/day.png",
+                                      width: 65,
+                                      height: 26,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              top: 28,
+                              left: 36,
+                              child: Image.asset(
+                                "assets/icons/blue.png",
+                                color: Colors.blue,
+                                width: 27,
+                                height: 27,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 4),
+                    Container(
+                      width: 139,
+                      child: Stack(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(
+                                color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                width: 1,
+                              ),
+                            ),
+                            color: Color(0xFFFFFFFF),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/icons/smith.png",
+                                        width: 42,
+                                        height: 40,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 29, bottom: 19),
+                                      child: Image.asset(
+                                        "assets/icons/stary.png",
+                                        width: 14,
+                                        height: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        bottom: 19,
+                                      ),
+                                      child: Text("4.5",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xFFFFAA08),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Michael williams",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins-Medium'),
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Plumber",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                        fontFamily: 'Poppins-Regular',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Image.asset(
+                                    "assets/icons/day.png",
+                                    width: 65,
+                                    height: 26,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 28,
+                            left: 36,
+                            child: Image.asset(
+                              "assets/icons/blue.png",
+                              color: Colors.blue,
+                              width: 27,
+                              height: 27,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Container(
+                      //3cont
+                      width: 141,
+                      child: Stack(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(
+                                color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                width: 1,
+                              ),
+                            ),
+                            color: Color(0xFFFFFFFF),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/icons/smith.png",
+                                        width: 42,
+                                        height: 40,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 29, bottom: 19),
+                                      child: Image.asset(
+                                        "assets/icons/stary.png",
+                                        width: 14,
+                                        height: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        bottom: 19,
+                                      ),
+                                      child: Text("4.5",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xFFFFAA08),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Michael williams",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins-Medium'),
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Plumber",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                        fontFamily: 'Poppins-Regular',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Image.asset(
+                                    "assets/icons/day.png",
+                                    width: 65,
+                                    height: 26,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 28,
+                            left: 36,
+                            child: Image.asset(
+                              "assets/icons/blue.png",
+                              color: Colors.blue,
+                              width: 27,
+                              height: 27,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )),
+            Expanded(
+              flex: 2,
+              child: Column(children: [
+ Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 69, left: 14),
+                    child: Text(
+                      "Popular",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                          fontFamily: 'Popular-SemiBold',
+                          color: Color(0xFF000000)),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 13, bottom: 69),
+                    child: Text(
+                      "See All",
+                      style: TextStyle(
+                          color: Color(0xFF50BD9A),
+                          fontSize: 12,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+              ),
+              ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 9),
+                      child: Container(
+                        height: 154,
+                        width: 139,
+                        child: Stack(
+                          children: [
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                side: BorderSide(
+                                  color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                  width: 1,
+                                ),
+                              ),
+                              color: Color(0xFFFFFFFF),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/icons/smith.png",
+                                          width: 42,
+                                          height: 40,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 29, bottom: 19),
+                                        child: Image.asset(
+                                          "assets/icons/stary.png",
+                                          width: 14,
+                                          height: 14,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          bottom: 19,
+                                        ),
+                                        child: Text("4.5",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Color(0xFFFFAA08),
+                                              fontWeight: FontWeight.bold,
+                                            )),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 4),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text(
+                                      "Michael williams",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins-Medium'),
+                                    ),
+                                  ),
+                                  SizedBox(height: 4),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 8),
+                                    child: Text(
+                                      "Plumber",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 10,
+                                          fontFamily: 'Poppins-Regular',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Image.asset(
+                                      "assets/icons/day.png",
+                                      width: 65,
+                                      height: 26,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Positioned(
+                              top: 28,
+                              left: 36,
+                              child: Image.asset(
+                                "assets/icons/blue.png",
+                                color: Colors.blue,
+                                width: 27,
+                                height: 27,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 4),
+                    Container(
+                      width: 139,
+                      child: Stack(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(
+                                color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                width: 1,
+                              ),
+                            ),
+                            color: Color(0xFFFFFFFF),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/icons/smith.png",
+                                        width: 42,
+                                        height: 40,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 29, bottom: 19),
+                                      child: Image.asset(
+                                        "assets/icons/stary.png",
+                                        width: 14,
+                                        height: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        bottom: 19,
+                                      ),
+                                      child: Text("4.5",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xFFFFAA08),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Michael williams",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins-Medium'),
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Plumber",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                        fontFamily: 'Poppins-Regular',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Image.asset(
+                                    "assets/icons/day.png",
+                                    width: 65,
+                                    height: 26,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 28,
+                            left: 36,
+                            child: Image.asset(
+                              "assets/icons/blue.png",
+                              color: Colors.blue,
+                              width: 27,
+                              height: 27,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Container(
+                      //3cont
+                      width: 141,
+                      child: Stack(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(
+                                color: Color(0xFFEAEAEA).withOpacity(0.10),
+                                width: 1,
+                              ),
+                            ),
+                            color: Color(0xFFFFFFFF),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/icons/smith.png",
+                                        width: 42,
+                                        height: 40,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(left: 29, bottom: 19),
+                                      child: Image.asset(
+                                        "assets/icons/stary.png",
+                                        width: 14,
+                                        height: 14,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        bottom: 19,
+                                      ),
+                                      child: Text("4.5",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xFFFFAA08),
+                                            fontWeight: FontWeight.bold,
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Michael williams",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 12,
+                                        fontFamily: 'Poppins-Medium'),
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Text(
+                                    "Plumber",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                        fontFamily: 'Poppins-Regular',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Image.asset(
+                                    "assets/icons/day.png",
+                                    width: 65,
+                                    height: 26,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            top: 28,
+                            left: 36,
+                            child: Image.asset(
+                              "assets/icons/blue.png",
+                              color: Colors.blue,
+                              width: 27,
+                              height: 27,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  "See All",
-                  style: TextStyle(
-                      color: Color(0xFF50BD9A),
-                      fontSize: 12,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w600),
-                )
+
               ],
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.green,
+              ),
             ),
           ],
         ),
