@@ -11,91 +11,88 @@ class _demoScreenState extends State<demoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(6.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("120 Products",style: TextStyle(
-                        color: Colors.black,
-                        
-                        fontSize: 11),),
-                DropdownButton<String>(
-                  items: [
-                    DropdownMenuItem<String>(
-                      value: "1",
-                      child: Text("5 items",style: TextStyle(
-                        
-                        fontSize: 10),),
-                    ),
-                    DropdownMenuItem<String>(
-                      value: "2",
-                      child: Text("10 items",style: TextStyle(
-                        
-                        fontSize: 10),),
-                    ),
-                    DropdownMenuItem<String>(
-                      value: "3",
-                      child: Text("15 items",style: TextStyle(
-                        
-                        fontSize: 10),),
-                    ),
-                  ],
-                  onChanged: (_value) => {print(_value.toString())},
-                  hint: Text(
-                    "Popular",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 10),
-                  ),
-                ),
-              ],
-            ),
+      backgroundColor: Color(0xFFFFFFFF),
+      appBar: AppBar(
+        backgroundColor: Color(0xFFFFFFFF),
+        shadowColor: Colors.transparent,
+        leading: Icon(
+          Icons.arrow_back_ios,
+          color: Color(0xFF656565),
+        ),
+        title: Padding(
+          padding: EdgeInsets.only(left: 50),
+          child: Text(
+            "Popular",
+            style: TextStyle(
+                color: Color(0xFF000000),
+                fontSize: 18,
+                fontFamily: 'Poppins-Medium,',
+                fontWeight: FontWeight.w600),
           ),
-         Expanded(child: GridView.extent(  
-            primary: false,  
-            padding: const EdgeInsets.all(16),  
-            crossAxisSpacing: 15,  
-            mainAxisSpacing: 20,  
-            maxCrossAxisExtent: 200.0,  
-            children: <Widget>[  
-              Card(
-                child: Container(  
-                  padding: const EdgeInsets.all(8),  
-                  child: const Text('First', style: TextStyle(fontSize: 20)),  
-                  color: Colors.white,  
+        ),
+      ),
+      body: Container(
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          itemCount: 8,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              margin: EdgeInsets.fromLTRB(13, 7, 13, 10), //margin
+              elevation: 5,
+              shadowColor: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+                side: BorderSide(
+                  color: Color(0xFFEAEAEA).withOpacity(0.10),
+                  width: 1,
                 ),
-              ),  
-              Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Text('Second', style: TextStyle(fontSize: 20)),  
-                color: Colors.blue,  
-              ),  
-              Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Text('Third', style: TextStyle(fontSize: 20)),  
-                color: Colors.blue,  
-              ),  
-              Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Text('Four', style: TextStyle(fontSize: 20)),  
-                color: Colors.yellow,  
-              ),  
-              Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Text('Fifth', style: TextStyle(fontSize: 20)),  
-                color: Colors.yellow,  
-              ),  
-              Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Text('Six', style: TextStyle(fontSize: 20)),  
-                color: Colors.blue,  
-              ),  
-            ]),
-         )],
+              ),
+              color: Color(0xFFFFFFFF),
+
+              child: Container(
+                width: 172,
+                height: 205,
+                child: Row(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 80),
+                      child: Image.asset(
+                        "assets/icons/smith.png",
+                        width: 83,
+                        height: 90,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 29, bottom: 126),
+                      child: Image.asset(
+                        "assets/icons/stary.png",
+                        width: 14,
+                        height: 14,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        bottom: 126,
+                      ),
+                      child: Text("4.5",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color(0xFFFFAA08),
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ),
+                      ],
+                    
+                    ),
+                  
+                ),
+              
+            );
+          },
+        ),
       ),
     );
   }
